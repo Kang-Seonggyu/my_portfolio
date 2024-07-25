@@ -1,7 +1,15 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Image from 'next/image';
+import styles from './page.module.css';
+import dynamic from 'next/dynamic';
 
 export default function Home() {
+  const LazyLoading = dynamic(
+    () => import('@/components/common/animated-render'),
+    {
+      loading: () => <p>Loading...</p>,
+    }
+  );
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -15,7 +23,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{" "}
+            By{' '}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -90,6 +98,18 @@ export default function Home() {
           </p>
         </a>
       </div>
+      <div className="spacer" style={{ width: '100%', height: '30vh' }}></div>
+      <div className="spacer" style={{ width: '100%', height: '60vh' }}></div>
+      <LazyLoading>
+        <div style={{ width: '300px', height: '200px', background: 'green' }}>
+          애니메이션 렌더러
+        </div>
+      </LazyLoading>
+      <LazyLoading>
+        <div style={{ width: '200px', height: '400px', background: 'red' }}>
+          애니메이션 렌더러
+        </div>
+      </LazyLoading>
     </main>
   );
 }
