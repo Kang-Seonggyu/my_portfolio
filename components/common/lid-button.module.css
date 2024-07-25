@@ -1,0 +1,128 @@
+.lidWrap {
+  display: inline-block;
+  margin: 4px;
+}
+.lidWrap * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.lidWrap a {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  box-shadow: inset 0 0 0.367em rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0.22em;
+  padding: 0.55em 1.1em;
+  perspective: 10em;
+  transition: box-shadow 0.4s, border-radius 0.4s;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  outline: none;
+}
+.lidWrap a:hover {
+  border: none;
+  outline: none;
+}
+.lidWrap a span {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 0.22em;
+  padding: 0.55em;
+  transform-origin: 50% 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.4s, color 0.3s, box-shadow 0.3s;
+}
+.lidWrap a:hover {
+  cursor: pointer;
+  z-index: 65535;
+  border-radius: 0.22em 0.22em 0 0;
+  box-shadow: inset 0 0 0.36666667em rgba(0, 0, 0, 0.5),
+    0 2.75em 1.76em 4px rgba(0, 0, 0, 0.5);
+}
+.lidWrap a:hover span {
+  border-radius: 0.22em 0.22em 0 0;
+  transform: rotateX(-120deg);
+}
+
+.lidWrap a.red {
+  color: #e43;
+}
+.lidWrap a.red span {
+  background: #e43;
+  color: #fff;
+}
+.lidWrap a.red:hover span {
+  color: transparent;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 -1px 0 #cc2211,
+    0 -2px 0 -0.5px #cc2211, 0 -3px 0 -1px #cc2211, 0 -4px 0 -1.5px #cc2211,
+    0 -5px 0 -2.5px #cc2211, 0 -7px 0.2px -4px #cc2211;
+}
+
+.lidWrap a.blue {
+  color: #48f;
+}
+.lidWrap a.blue span {
+  background: #48f;
+  color: #fff;
+}
+.lidWrap a.blue:hover span {
+  color: transparent;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 -1px 0 #2266dd,
+    0 -2px 0 -0.5px #2266dd, 0 -3px 0 -1px #2266dd, 0 -4px 0 -1.5px #2266dd,
+    0 -5px 0 -2.5px #2266dd, 0 -7px 0.2px -4px #2266dd;
+}
+
+.lidWrap a.green {
+  color: #3a5;
+}
+.lidWrap a.green span {
+  background: #3a5;
+  color: #fff;
+}
+.lidWrap a.green:hover span {
+  color: transparent;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 -1px 0 #118833,
+    0 -2px 0 -0.5px #118833, 0 -3px 0 -1px #118833, 0 -4px 0 -1.5px #118833,
+    0 -5px 0 -2.5px #118833, 0 -7px 0.2px -4px #118833;
+}
+
+.lidWrap a.yellow {
+  color: #ea0;
+}
+.lidWrap a.yellow span {
+  background: #ea0;
+  color: #fff;
+}
+.lidWrap a.yellow:hover span {
+  color: transparent;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 -1px 0 #cc8800,
+    0 -2px 0 -0.5px #cc8800, 0 -3px 0 -1px #cc8800, 0 -4px 0 -1.5px #cc8800,
+    0 -5px 0 -2.5px #cc8800, 0 -7px 0.2px -4px #cc8800;
+}
+
+.lidWrap a.fb {
+  color: #369;
+}
+.lidWrap a.fb span {
+  background: #369;
+  color: #fff;
+}
+.lidWrap a.fb:hover span {
+  color: transparent;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 -1px 0 #114477,
+    0 -2px 0 -0.5px #114477, 0 -3px 0 -1px #114477, 0 -4px 0 -1.5px #114477,
+    0 -5px 0 -2.5px #114477, 0 -7px 0.2px -4px #114477;
+}

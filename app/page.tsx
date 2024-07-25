@@ -24,7 +24,19 @@ export default function Home() {
       </div>
 
       <div className={st.contents}>
-        <div className="spacer" style={{ width: '100%', height: '30vh' }}></div>
+        <div className="spacer" style={{ width: '100%', height: '30vh' }}>
+          <LidButton
+            closeText="Close Me"
+            openText="Open Up"
+            color="red"
+          ></LidButton>
+          <LidButton closeText="Green" openText="" color="green"></LidButton>
+          <LidButton
+            closeText="Blue One"
+            openText="This is"
+            color="blue"
+          ></LidButton>
+        </div>
         <LazyLoading>
           <div style={{ width: '300px', height: '200px', background: 'green' }}>
             애니메이션 렌더러
@@ -35,7 +47,7 @@ export default function Home() {
             애니메이션 렌더러
           </div>
         </LazyLoading>
-        <div className="spacer" style={{ width: '100%', height: '60vh' }}></div>
+        <div className="spacer" style={{ width: '100%', height: '90vh' }}></div>
       </div>
     </main>
   );

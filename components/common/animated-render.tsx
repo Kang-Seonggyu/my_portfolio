@@ -16,7 +16,7 @@ export default function AnimatedRender({ children }: AnimatedRenderProps) {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.55 }
+      { threshold: 0.3 }
     );
 
     if (ref.current) {
