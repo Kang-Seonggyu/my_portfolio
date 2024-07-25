@@ -11,11 +11,6 @@
   background-color: #000;
 }
 
-.contents {
-  margin-top: 100vh;
-  background-color: #fff;
-}
-
 #stars {
   width: 1px;
   height: 1px;
@@ -398,7 +393,6 @@
       878px 300px #fff, 730px 726px #fff, 1137px 68px #fff;
   }
 }
-
 #stars2 {
   width: 2px;
   height: 2px;
@@ -518,7 +512,6 @@
       782px 598px #fff, 1709px 1377px #fff, 717px 1040px #fff;
   }
 }
-
 #stars3 {
   width: 3px;
   height: 3px;
@@ -562,6 +555,13 @@
   }
 }
 
+.contents {
+  width: 100%;
+  max-width: 1280px;
+  margin: 100vh auto 0;
+  background-color: #fff;
+}
+
 @keyframes animStar {
   from {
     transform: translateY(0px);
@@ -572,11 +572,43 @@
   }
 }
 
-.name {
-  font-size: 80px;
-  font-family: cursive;
-  color: transparent;
+.visual_text {
+  font-size: 110px;
+  color: var(--midnight-blue);
   font-weight: bold;
   text-transform: uppercase;
-  -webkit-text-stroke: 4px var(--lavender);
+  -webkit-text-stroke: 3px var(--lavender);
+}
+
+.visual_text p {
+  transition: all 0.3s ease-in-out;
+  text-wrap: nowrap;
+}
+.visual_text p:nth-child(1) {
+  font-size: 0.8em;
+}
+
+@media (max-width: 576px) {
+  .visual_text {
+    font-size: 30px;
+    -webkit-text-stroke: 0.5px var(--lavender);
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .visual_text {
+    font-size: 55px;
+    -webkit-text-stroke: 1px var(--lavender);
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .visual_text {
+    font-size: 70px;
+    -webkit-text-stroke: 1.5px var(--lavender);
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .visual_text {
+    font-size: 90px;
+    -webkit-text-stroke: 2px var(--lavender);
+  }
 }
