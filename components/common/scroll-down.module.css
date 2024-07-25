@@ -1,0 +1,30 @@
+.arrow_container {
+  position: absolute;
+  left: calc(50% - 40px);
+  top: calc(100vh - 100px);
+}
+.arrow_container .arrow {
+  position: absolute;
+  opacity: 1;
+}
+.arrow_container .arrow:first-child {
+  animation: motion 2s ease-out 0s infinite;
+}
+.arrow_container .arrow:last-child {
+  animation: motion 2s ease-out 1s infinite;
+  opacity: 0;
+}
+
+@keyframes motion {
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
