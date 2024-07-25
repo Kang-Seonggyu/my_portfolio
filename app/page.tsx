@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import styles from './page.module.css';
+import st from './page.module.css';
 import dynamic from 'next/dynamic';
+import LidButton from '@/components/common/lid-button';
 
 export default function Home() {
   const LazyLoading = dynamic(
@@ -11,105 +11,32 @@ export default function Home() {
   );
 
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className={st.main}>
+      <div className={st.visual}>
+        <div id={st.stars}></div>
+        <div id={st.stars2}></div>
+        <div id={st.stars3}></div>
+
+        <div className={st.name}>
+          <p>kang seong gyu</p>
+          <p>frontend</p>
         </div>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className={st.contents}>
+        <div className="spacer" style={{ width: '100%', height: '30vh' }}></div>
+        <LazyLoading>
+          <div style={{ width: '300px', height: '200px', background: 'green' }}>
+            애니메이션 렌더러
+          </div>
+        </LazyLoading>
+        <LazyLoading>
+          <div style={{ width: '200px', height: '400px', background: 'red' }}>
+            애니메이션 렌더러
+          </div>
+        </LazyLoading>
+        <div className="spacer" style={{ width: '100%', height: '60vh' }}></div>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-      <div className="spacer" style={{ width: '100%', height: '30vh' }}></div>
-      <div className="spacer" style={{ width: '100%', height: '60vh' }}></div>
-      <LazyLoading>
-        <div style={{ width: '300px', height: '200px', background: 'green' }}>
-          애니메이션 렌더러
-        </div>
-      </LazyLoading>
-      <LazyLoading>
-        <div style={{ width: '200px', height: '400px', background: 'red' }}>
-          애니메이션 렌더러
-        </div>
-      </LazyLoading>
     </main>
   );
 }
