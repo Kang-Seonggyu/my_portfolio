@@ -13,7 +13,6 @@ const audiowide = Audiowide({
 });
 
 export default function Home() {
-  const [maxHeight, setMaxHeight] = useState(1);
   const [scrollY, setScrollY] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -21,23 +20,19 @@ export default function Home() {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-
-    const handleResize = () => {
-      setMaxHeight(window.innerHeight);
-    };
-    handleResize();
+    handleScroll();
 
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
-  const scrollPercentage = Math.min(scrollY / (maxHeight - 100), 1);
-  const moveX = Math.round(scrollPercentage * 100) * 2;
+  // 스크롤 700px 움직이면 visual text 사라지도록
+  const moveX = Math.round(scrollY / 7);
+
+  const scrollDownPosit = scrollY >= 400 ? 'absolute' : 'fixed';
 
   return (
     <main ref={ref} className={st.main}>
@@ -55,7 +50,8 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <ScrollDown style={{ top: 'calc(-10vh - 50px)' }}></ScrollDown>
+      <ScrollDown posit={scrollDownPosit}></ScrollDown>
+      <div className="spacer" style={{ height: '500px' }}></div>
 
       <div className={st.contents}>
         <div className="spacer" style={{ width: '100%', height: '30vh' }}>

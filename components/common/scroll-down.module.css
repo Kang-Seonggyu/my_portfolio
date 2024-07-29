@@ -1,7 +1,5 @@
 .arrow_container {
-  position: absolute;
   left: calc(50% - 40px);
-  top: calc(100vh - 100px);
 }
 .arrow_container .arrow {
   position: absolute;
