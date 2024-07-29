@@ -1,0 +1,99 @@
+.hatch {
+  height: 50px;
+  position: relative;
+  display: flex;
+  padding: 0 60px;
+}
+.hatch .door {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(44, 44, 44);
+  transition: all 0.7s ease-in-out;
+}
+.hatch .door_left {
+  transform-origin: 17px center;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.hatch .door_right {
+  transform-origin: calc(100% - 17px);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.left_open {
+  transform: rotate(-105deg);
+}
+.right_open {
+  transform: rotate(105deg);
+}
+.close {
+  transform: rotate(0);
+}
+
+.light {
+  position: absolute;
+  left: 80px;
+  right: 80px;
+  top: 0;
+  bottom: 0;
+  transition: all 0.7s ease-in-out;
+  z-index: -1;
+}
+.light_on {
+  box-shadow: 0px -6vh 8vh rgba(255, 255, 255, 0.4),
+    0px -2vh 6vh rgba(255, 255, 255, 0.8);
+}
+.light_off {
+  box-shadow: 0px 0px 8vh rgba (255, 255, 255, 0.4);
+}
+
+.hatch .frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(44, 44, 44);
+}
+
+@media (max-width: 992px) {
+  .hatch {
+    height: 22px;
+    padding: 0 40px;
+  }
+  .hatch .door_left {
+    transform-origin: 7px center;
+    border-top-left-radius: 11px;
+    border-bottom-left-radius: 11px;
+  }
+  .hatch .door_right {
+    transform-origin: calc(100% - 7px);
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+  }
+  .light {
+    left: 50px;
+    right: 50px;
+  }
+}
+@media (max-width: 576px) {
+  .hatch {
+    height: 15px;
+    padding: 0 20px;
+  }
+  .hatch .door_left {
+    transform-origin: 5px center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .hatch .door_right {
+    transform-origin: calc(100% - 5px);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .light {
+    left: 20px;
+    right: 20px;
+  }
+}

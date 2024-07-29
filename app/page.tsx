@@ -6,6 +6,7 @@ import AnimatedRender from '@/components/common/animated-render';
 import LidButton from '@/components/common/lid-button';
 import ScrollDown from '@/components/common/scroll-down';
 import { Audiowide } from 'next/font/google';
+import Hatch from '@/components/home/hatch';
 
 const audiowide = Audiowide({
   subsets: ['latin'],
@@ -51,9 +52,11 @@ export default function Home() {
         </div>
       </div>
       <ScrollDown posit={scrollDownPosit}></ScrollDown>
-      <div className="spacer" style={{ height: '500px' }}></div>
 
+      <div className={st.contents_spacer}></div>
       <div className={st.contents}>
+        <Hatch></Hatch>
+
         <div className="spacer" style={{ width: '100%', height: '30vh' }}>
           <LidButton
             closeText="Close Me"

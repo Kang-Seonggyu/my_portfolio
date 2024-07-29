@@ -5,24 +5,16 @@ interface scrollDownProps {
   posit: string;
 }
 
-interface Style {
-  position: 'fixed' | 'absolute';
-  top: string;
-}
-
 export default function scrollDown({ posit }: scrollDownProps) {
-  const style: Style = { position: 'fixed', top: '86vh' };
-
+  let fixFlag = true;
   if (posit === 'fixed') {
-    style.position = 'fixed';
-    style.top = '86vh';
+    fixFlag = true;
   } else {
-    style.position = 'absolute';
-    style.top = 'calc(86vh + 400px)';
+    fixFlag = false;
   }
 
   return (
-    <div className={st.arrow_container} style={style}>
+    <div className={`${st.arrow_container} ${fixFlag ? st.fix : st.absol}`}>
       <div className={st.arrow}>
         <Image width={80} height={50} src="/icon/arrow-down.png" alt="" />
       </div>

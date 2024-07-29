@@ -13,6 +13,25 @@
   opacity: 0;
 }
 
+.fix {
+  position: fixed;
+  top: 86vh;
+}
+.absol {
+  position: absolute;
+  top: calc(86vh + 400px);
+}
+
+@media (max-width: 576px) {
+  .fix {
+    top: 84vh;
+  }
+  .absol {
+    position: absolute;
+    top: calc(84vh + 400px);
+  }
+}
+
 @keyframes motion {
   25% {
     opacity: 1;

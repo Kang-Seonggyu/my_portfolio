@@ -1,5 +1,7 @@
 .main {
   position: relative;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .visual {
@@ -9,6 +11,7 @@
   width: 100%;
   height: 100vh;
   min-height: 700px;
+  box-sizing: border-box;
   background-color: #000;
 }
 
@@ -556,8 +559,12 @@
   }
 }
 
+.contents_spacer {
+  height: 600px;
+}
+
 .contents {
-  width: 100%;
+  width: 90%;
   max-width: 1280px;
   margin: 100vh auto 0;
   background-color: #fff;
@@ -599,11 +606,17 @@
     font-size: 30px;
     -webkit-text-stroke: 0.5px var(--lavender);
   }
+  .contents_spacer {
+    height: 400px;
+  }
 }
 @media (min-width: 577px) and (max-width: 768px) {
   .visual_text {
     font-size: 55px;
     -webkit-text-stroke: 1px var(--lavender);
+  }
+  .contents_spacer {
+    height: 500px;
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
