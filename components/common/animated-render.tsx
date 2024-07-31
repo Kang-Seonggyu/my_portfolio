@@ -4,10 +4,16 @@ import React, { useEffect, useRef, useState } from 'react';
 import st from './animated-render.module.css';
 
 interface AnimatedRenderProps {
+  style?: Object;
   children: React.ReactNode;
+  threshold?: number
 }
 
-export default function AnimatedRender({ children }: AnimatedRenderProps) {
+export default function AnimatedRender({
+  style,
+  children,
+  threshold
+}: AnimatedRenderProps) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
@@ -16,7 +22,7 @@ export default function AnimatedRender({ children }: AnimatedRenderProps) {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.3 }
+      { threshold: threshold || 0.3 }
     );
 
     if (ref.current) {
@@ -34,6 +40,7 @@ export default function AnimatedRender({ children }: AnimatedRenderProps) {
     <div
       ref={ref}
       className={`${st.container} ${isVisible ? st.visible : st.hidden}`}
+      style={style}
     >
       {children}
     </div>

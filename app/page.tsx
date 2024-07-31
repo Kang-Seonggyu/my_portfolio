@@ -7,6 +7,7 @@ import LidButton from '@/components/common/lid-button';
 import ScrollDown from '@/components/common/scroll-down';
 import { Audiowide } from 'next/font/google';
 import Hatch from '@/components/home/hatch';
+import { Skills } from '@/components/home/skills';
 
 const audiowide = Audiowide({
   subsets: ['latin'],
@@ -31,7 +32,7 @@ export default function Home() {
   }, []);
 
   // 스크롤 700px 움직이면 visual text 사라지도록
-  const moveX = Math.round(scrollY / 7);
+  const moveX = Math.round(scrollY / 8);
 
   const scrollDownPosit = scrollY >= 400 ? 'absolute' : 'fixed';
 
@@ -56,24 +57,8 @@ export default function Home() {
       <div className={st.contents_spacer}></div>
       <div className={st.contents}>
         <Hatch></Hatch>
-
-        <div className="spacer" style={{ width: '100%', height: '30vh' }}>
-          <LidButton
-            closeText="Close Me"
-            openText="Open Up"
-            color="red"
-          ></LidButton>
-          <LidButton closeText="Green" openText="" color="green"></LidButton>
-          <LidButton
-            closeText="Blue One"
-            openText="This is"
-            color="blue"
-          ></LidButton>
-        </div>
-        <AnimatedRender>
-          <div style={{ width: '300px', height: '200px', background: 'green' }}>
-            애니메이션 렌더러
-          </div>
+        <AnimatedRender style={{ width:'100%', margin: '0 auto' }} threshold={0.1}>
+          <Skills></Skills>
         </AnimatedRender>
         <AnimatedRender>
           <div style={{ width: '300px', height: '200px', background: 'red' }}>
