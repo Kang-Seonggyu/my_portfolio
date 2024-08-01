@@ -13,3 +13,21 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+h2 { display: inline-flex; align-items: center; font-size: 30px; }
+h2::before { content: ""; display: inline-block; width: 23px; height: 23px; background-image: url('/images/icons/gear.svg'); background-size: 23px 23px; margin: 0 6px; animation: rotate .6s linear infinite; animation-play-state: paused; }
+h2:hover::before { animation-play-state: running; }
+
+@keyframes rotate {
+  from { transform: rotate(0);}
+  to { transform: rotate(360deg);}  
+}
+
+@media (max-width: 576px) {
+}
+@media (min-width: 577px) and (max-width: 768px) {
+}
+@media (min-width: 768px) and (max-width: 992px) {
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+}

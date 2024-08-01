@@ -6,12 +6,17 @@ import AnimatedRender from '@/components/common/animated-render';
 import LidButton from '@/components/common/lid-button';
 import ScrollDown from '@/components/common/scroll-down';
 import { Audiowide } from 'next/font/google';
+import { Orbitron } from 'next/font/google';
 import Hatch from '@/components/home/hatch';
 import { Skills } from '@/components/home/skills';
 
 const audiowide = Audiowide({
   subsets: ['latin'],
   weight: '400',
+});
+
+const orbit = Orbitron({
+  subsets: ['latin'],
 });
 
 export default function Home() {
@@ -37,7 +42,7 @@ export default function Home() {
   const scrollDownPosit = scrollY >= 400 ? 'absolute' : 'fixed';
 
   return (
-    <main ref={ref} className={st.main}>
+    <main ref={ref} className={`${st.main} ${orbit.className}`}>
       <div className={st.visual}>
         <div id={st.stars}></div>
         <div id={st.stars2}></div>
@@ -57,9 +62,14 @@ export default function Home() {
       <div className={st.contents_spacer}></div>
       <div className={st.contents}>
         <Hatch></Hatch>
-        <AnimatedRender style={{ width:'100%', margin: '0 auto' }} threshold={0.1}>
-          <Skills></Skills>
-        </AnimatedRender>
+        <div className={st.contents_box}>
+          <AnimatedRender
+            style={{ width: '100%', margin: '0 auto' }}
+            threshold={0.1}
+          >
+            <Skills></Skills>
+          </AnimatedRender>
+        </div>
         <AnimatedRender>
           <div style={{ width: '300px', height: '200px', background: 'red' }}>
             애니메이션 렌더러
