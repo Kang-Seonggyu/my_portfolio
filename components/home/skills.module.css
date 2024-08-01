@@ -2,17 +2,13 @@
   margin: 0 auto 40px;
 }
 
-.section h2 {
-  margin-bottom: 15px;
-}
-
 .container {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  height: 660px;
+  height: 705px;
   gap: 2vw;
 }
 
@@ -43,6 +39,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .skill_box > p > label {
   margin-left: 5px;
@@ -64,7 +64,6 @@
 
 @media (max-width: 576px) {
   .section {
-    padding: 10px 20px;
     margin-bottom: 20px;
   }
   .container {
