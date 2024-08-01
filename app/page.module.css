@@ -613,6 +613,9 @@
   .contents_spacer {
     height: 400px;
   }
+  .contents_box {
+    padding: 20px;
+  }
 }
 @media (min-width: 577px) and (max-width: 768px) {
   .visual_text {

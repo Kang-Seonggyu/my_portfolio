@@ -9,6 +9,7 @@ import { Audiowide } from 'next/font/google';
 import { Orbitron } from 'next/font/google';
 import Hatch from '@/components/home/hatch';
 import { Skills } from '@/components/home/skills';
+import AboutMe from '@/components/home/about-me';
 
 const audiowide = Audiowide({
   subsets: ['latin'],
@@ -64,8 +65,14 @@ export default function Home() {
         <Hatch></Hatch>
         <div className={st.contents_box}>
           <AnimatedRender
+            threshold={0.05}
+            style={{ width: '100%', display: 'block' }}
+          >
+            <AboutMe></AboutMe>
+          </AnimatedRender>
+          <AnimatedRender
             style={{ width: '100%', margin: '0 auto' }}
-            threshold={0.1}
+            threshold={0.05}
           >
             <Skills></Skills>
           </AnimatedRender>
