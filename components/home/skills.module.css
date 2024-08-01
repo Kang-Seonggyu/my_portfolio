@@ -1,6 +1,5 @@
 .section {
-  padding: 20px 40px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 }
 
 .section h2 {
@@ -20,6 +19,7 @@
 .skill_box {
   box-sizing: border-box;
   display: flex;
+  background-color: white;
   flex-wrap: wrap;
   row-gap: 10px;
   column-gap: 20px;
@@ -29,7 +29,7 @@
   width: calc(50% - 1vw);
 }
 .skill_box:nth-child(1) {
-  flex:1;
+  flex: 1;
 }
 .skill_box > h3 {
   width: 100%;
@@ -90,9 +90,9 @@
     font-size: 20px;
   }
 }
-@media (min-width: 769px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .container {
-    height: 750px;
+    height: 770px;
   }
   .skill_box > h3 {
     font-size: 20px;
