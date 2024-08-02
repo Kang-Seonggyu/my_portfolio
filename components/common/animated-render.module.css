@@ -1,7 +1,5 @@
 .container {
-  display: inline-block;
-  width: fit-content;
-  height: fit-content;
+  display: block;
   transition: all 0.5s ease-out;
   transform: translateY(20px);
   opacity: 0;
