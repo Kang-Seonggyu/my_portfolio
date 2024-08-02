@@ -222,8 +222,8 @@ export function Skills() {
             <Image
               src={'/images/skills/nginx.png'}
               alt=""
-              width={200}
-              height={50}
+              width={140}
+              height={45}
             />
           </p>
           <p>
