@@ -3,13 +3,13 @@
 import { useEffect, useRef, useState } from 'react';
 import st from './page.module.css';
 import AnimatedRender from '@/components/common/animated-render';
-import LidButton from '@/components/common/lid-button';
 import ScrollDown from '@/components/common/scroll-down';
 import { Audiowide } from 'next/font/google';
 import { Orbitron } from 'next/font/google';
 import Hatch from '@/components/home/hatch';
 import { Skills } from '@/components/home/skills';
 import AboutMe from '@/components/home/about-me';
+import { Projects } from '@/components/home/projects';
 
 const audiowide = Audiowide({
   subsets: ['latin'],
@@ -64,24 +64,18 @@ export default function Home() {
       <div className={st.contents}>
         <Hatch></Hatch>
         <div className={st.contents_box}>
-          <AnimatedRender
-            threshold={0.05}
-            style={{ width: '100%', display: 'block' }}
-          >
+          <AnimatedRender threshold={0.05}>
             <AboutMe></AboutMe>
           </AnimatedRender>
-          <AnimatedRender
-            style={{ width: '100%', margin: '0 auto' }}
-            threshold={0.05}
-          >
+
+          <AnimatedRender threshold={0.05}>
             <Skills></Skills>
           </AnimatedRender>
+
+          <AnimatedRender>
+            <Projects></Projects>
+          </AnimatedRender>
         </div>
-        <AnimatedRender>
-          <div style={{ width: '300px', height: '200px', background: 'red' }}>
-            애니메이션 렌더러
-          </div>
-        </AnimatedRender>
         <div className="spacer" style={{ width: '100%', height: '90vh' }}></div>
       </div>
     </main>
