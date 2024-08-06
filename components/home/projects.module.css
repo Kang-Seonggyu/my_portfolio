@@ -59,6 +59,18 @@
   background-color: var(--lavender);
   font-style: normal;
 }
+.content desc > div a {
+  color: var(--midnight-blue);
+}
+.content desc > div a::after {
+  content: '';
+  margin-left: 4px;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-image: url('/icons/outsite.svg');
+  background-size: cover;
+}
 
 .flexwrap {
   display: flex;
