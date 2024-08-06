@@ -4,12 +4,12 @@ import st from './about-me.module.css';
 export default function AboutMe() {
   // prettier-ignore
   const myInfo = [
-    { type:'span',key: '이름', value: '강성규', img: 'images/icons/profile.svg' },
-    { type:'span',key: '생년월일', value: '1994.12.11', img: 'images/icons/calendar.svg' },
-    { type:'span',key: '주소지', value: '경북 포항시', img: 'images/icons/location.svg' },
-    { type:'anchor', func: 'tel:', key: '연락처', value: '010-6558-5370', img: 'images/icons/call.svg' },
-    { type:'anchor', func: 'mailto:', key: '이메일', value: 'sg5370@naver.com', img: 'images/icons/email.svg' },
-    { type:'anchor', func: '', key: '깃허브', value: 'jokekim609@gmail.com', img: 'images/icons/github.svg' },
+    { type:'span',key: '이름', value: '강성규', img: 'icons/profile.svg' },
+    { type:'span',key: '생년월일', value: '1994.12.11', img: 'icons/calendar.svg' },
+    { type:'span',key: '주소지', value: '경북 포항시', img: 'icons/location.svg' },
+    { type:'anchor', func: 'tel:', key: '연락처', value: '010-6558-5370', img: 'icons/call.svg' },
+    { type:'anchor', func: 'mailto:', key: '이메일', value: 'sg5370@naver.com', img: 'icons/email.svg' },
+    { type:'anchor', func: '', key: '깃허브', value: 'jokekim609@gmail.com', img: 'icons/github.svg' },
   ];
   return (
     <section>

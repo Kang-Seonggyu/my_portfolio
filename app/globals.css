@@ -20,7 +20,7 @@ img { user-drag: none; -webkit-user-drag: none;	-moz-user-select: none; }
 .anti-drag { user-drag: none; -webkit-user-drag: none; -moz-user-select: none; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none }
 
 h2 { display: inline-flex; margin-bottom: 15px; align-items: center; font-size: 30px; }
-h2::before { content: ""; display: inline-block; width: 23px; height: 23px; background-image: url('/images/icons/gear.svg'); background-size: 23px 23px; margin: 0 6px; animation: rotate .6s linear infinite; animation-play-state: paused; }
+h2::before { content: ""; display: inline-block; width: 23px; height: 23px; background-image: url('/icons/gear.svg'); background-size: 23px 23px; margin: 0 6px; animation: rotate .6s linear infinite; animation-play-state: paused; }
 h2:hover::before { animation-play-state: running; }
 
 /* Carousel slide */
