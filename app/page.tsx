@@ -76,7 +76,6 @@ export default function Home() {
             <Projects></Projects>
           </AnimatedRender>
         </div>
-        <div className="spacer" style={{ width: '100%', height: '90vh' }}></div>
       </div>
     </main>
   );
