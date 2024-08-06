@@ -72,7 +72,7 @@ export default function Home() {
             <Skills></Skills>
           </AnimatedRender>
 
-          <AnimatedRender>
+          <AnimatedRender threshold={0.05}>
             <Projects></Projects>
           </AnimatedRender>
         </div>

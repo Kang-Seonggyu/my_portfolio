@@ -68,6 +68,7 @@
   }
   .container {
     gap: 20px;
+    max-height: none;
   }
   .skill_box {
     width: 100%;
