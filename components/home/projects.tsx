@@ -12,6 +12,10 @@ export function Projects() {
       skills:['JQuery','JQueryUI'],
       images: [{src:'/images/projects/jobportal2/경주정보고1.png',detail:''},{src:'/images/projects/jobportal2/경주정보고2.png',detail:''},{src:'/images/projects/jobportal2/경주정보고3.png',detail:''},{src:'/images/projects/jobportal2/경주정보고4.png',detail:''},{src:'/images/projects/jobportal2/경주정보고5.png',detail:''},{src:'/images/projects/jobportal2/경주정보고6.png',detail:''}]
     },
+    'ph_yesan': {
+      skills:['React','Redux','React-Query',],
+      images: [{src:'/images/projects/phyesan/예산재정1.png',detail:''},{src:'/images/projects/phyesan/예산재정2.png',detail:''},{src:'/images/projects/phyesan/예산재정3.png',detail:''},{src:'/images/projects/phyesan/예산재정4.png',detail:''}]
+    },
     'P.Front': {
       skills:['React','TailwindCSS','Redux','Redux-saga','NodeJs'],
       images: [{src:'/images/projects/pfront/pfront1.png',detail:''},{src:'/images/projects/pfront/pfront2.png',detail:''},{src:'/images/projects/pfront/pfront3.png',detail:''},{src:'/images/projects/pfront/pfront4.png',detail:''},{src:'/images/projects/pfront/pfront5.png',detail:''},{src:'/images/projects/pfront/pfront6.png',detail:''},{src:'/images/projects/pfront/pfront7.png',detail:''}]
@@ -56,6 +60,49 @@ export function Projects() {
                 <p>데이터 엑셀 다운로드 기능 구현</p>
                 <p>통계 이력에 대한 데이터 시각화</p>
                 <p>주문 내역 데이터 시각화 및 환불기능</p>
+              </div>
+            </div>
+          </desc>
+        </div>
+      </div>
+
+      <div className={st.container}>
+        <h3>포항시 예산재정</h3>
+        <div className={st.content}>
+          <Carousel data={projects['ph_yesan'].images}></Carousel>
+          <desc>
+            <div>
+              <label>Skills</label>
+              <span className={st.flexwrap}>
+                {projects['ph_yesan'].skills.map((skill, i) => (
+                  <em key={`ph_yesan_${skill}_${i}`}>{skill}</em>
+                ))}
+              </span>
+            </div>
+            <div>
+              <label>Period</label>
+              <span>2022.11 ~ 2023.05</span>
+            </div>
+            <div>
+              <label>Desc</label>
+              <span>
+                <b>포항시의 예산 및 재정을 관리하는 웹사이트</b>입니다.
+              </span>
+            </div>
+            <div>
+              <label>Site</label>
+              <a href="https://www.pohang.go.kr/phyesan" target="_blank">
+                pohang.go.kr/phyesan
+              </a>
+            </div>
+            <div>
+              <label>Detail</label>
+              <div>
+                <p>매장/메뉴 운영 관리</p>
+                <p>Redux를 이용한 전역상태관리</p>
+                <p>React-Query를 이용한 API 연동</p>
+                <p>반응형 웹 디자인</p>
+                <p>Drag&Drop을 이용한 순서변경</p>
               </div>
             </div>
           </desc>
@@ -110,11 +157,10 @@ export function Projects() {
               <label>Skills</label>
               <span className={st.flexwrap}>
                 {projects['jobportal'].skills.map((skill, i) => (
-                  <em key={`temp_jobportal_${skill}_${i}`}>{skill}</em>
+                  <em key={`jobportal_${skill}_${i}`}>{skill}</em>
                 ))}
               </span>
             </div>
-
             <div>
               <label>Period</label>
               <span>2023.11 ~ 2024.02</span>
