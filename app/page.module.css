@@ -741,3 +741,8 @@
     -webkit-text-stroke: 2px var(--lavender);
   }
 }
+@media (min-width: 1920px) {
+  .visual_text {
+    padding-top: 280px;
+  }
+}
