@@ -10,6 +10,13 @@ import Hatch from '@/components/home/hatch';
 import { Skills } from '@/components/home/skills';
 import AboutMe from '@/components/home/about-me';
 import { Projects } from '@/components/home/projects';
+import {
+  Astronaut,
+  Earth,
+  Neptune,
+  Saturn,
+  Venus,
+} from '@/components/common/background-images';
 
 const audiowide = Audiowide({
   subsets: ['latin'],
@@ -57,7 +64,10 @@ export default function Home() {
             frontend
           </p>
         </div>
+        <Astronaut />
       </div>
+      <Earth />
+
       <ScrollDown posit={scrollDownPosit}></ScrollDown>
 
       <div className={st.contents_spacer}></div>
@@ -67,14 +77,18 @@ export default function Home() {
           <AnimatedRender threshold={0.05}>
             <AboutMe></AboutMe>
           </AnimatedRender>
-
           <AnimatedRender threshold={0.05}>
             <Skills></Skills>
           </AnimatedRender>
-
           <AnimatedRender threshold={0.05}>
             <Projects></Projects>
           </AnimatedRender>
+        </div>
+
+        <div className="bg_planets">
+          <Saturn />
+          <Venus />
+          <Neptune />
         </div>
       </div>
     </main>
