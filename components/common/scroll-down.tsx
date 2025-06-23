@@ -16,11 +16,11 @@ export default function scrollDown({ posit }: scrollDownProps) {
   return (
     <div className={`${st.arrow_container} ${fixFlag ? st.fix : st.absol}`}>
       <div className={st.arrow}>
-        <Image width={80} height={50} src="/icon/arrow-down.png" alt="" />
+        <Image width={80} height={50} src="/icons/arrow-down.png" alt="" />
       </div>
 
       <div className={st.arrow}>
-        <Image width={80} height={50} src="/icon/arrow-down.png" alt="" />
+        <Image width={80} height={50} src="/icons/arrow-down.png" alt="" />
       </div>
     </div>
   );
