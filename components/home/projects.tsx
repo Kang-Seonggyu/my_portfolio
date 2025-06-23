@@ -4,27 +4,94 @@ import st from './projects.module.css';
 export function Projects() {
   // prettier-ignore
   const projects = {
+    'nodetalks':{
+      skills:['JQuery'],
+      images: [
+        {src:'/images/projects/nodetalks/nodetalks1.png',detail:''},
+        {src:'/images/projects/nodetalks/nodetalks2.png',detail:''},
+        {src:'/images/projects/nodetalks/nodetalks3.png',detail:''},
+        {src:'/images/projects/nodetalks/nodetalks4.png',detail:''},          
+      ]
+    },
+    
     'temp_jobportal':{
       skills:['React','Redux','Redux-saga'],
-      images: [{src:'/images/projects/jobportal/jobportal1.png',detail:''},{src:'/images/projects/jobportal/jobportal2.png',detail:''},{src:'/images/projects/jobportal/jobportal3.png',detail:''},{src:'/images/projects/jobportal/jobportal4.png',detail:''},{src:'/images/projects/jobportal/jobportal5.png',detail:''},{src:'/images/projects/jobportal/jobportal6.png',detail:''}]
+      images: [{src:'/images/projects/jobportal/jobportal1.png',detail:''},
+        {src:'/images/projects/jobportal/jobportal2.png',detail:''},
+        {src:'/images/projects/jobportal/jobportal3.png',detail:''},
+        {src:'/images/projects/jobportal/jobportal4.png',detail:''},
+        {src:'/images/projects/jobportal/jobportal5.png',detail:''},
+        {src:'/images/projects/jobportal/jobportal6.png',detail:''}]
     },
+    
     'jobportal':{
       skills:['JQuery','JQueryUI'],
-      images: [{src:'/images/projects/jobportal2/경주정보고1.png',detail:''},{src:'/images/projects/jobportal2/경주정보고2.png',detail:''},{src:'/images/projects/jobportal2/경주정보고3.png',detail:''},{src:'/images/projects/jobportal2/경주정보고4.png',detail:''},{src:'/images/projects/jobportal2/경주정보고5.png',detail:''},{src:'/images/projects/jobportal2/경주정보고6.png',detail:''}]
+      images: [{src:'/images/projects/jobportal2/경주정보고1.png',detail:''},
+        {src:'/images/projects/jobportal2/경주정보고2.png',detail:''},
+        {src:'/images/projects/jobportal2/경주정보고3.png',detail:''},
+        {src:'/images/projects/jobportal2/경주정보고4.png',detail:''},
+        {src:'/images/projects/jobportal2/경주정보고5.png',detail:''},
+        {src:'/images/projects/jobportal2/경주정보고6.png',detail:''}]
     },
+    
     'ph_yesan': {
       skills:['React','Redux','React-Query',],
-      images: [{src:'/images/projects/phyesan/예산재정1.png',detail:''},{src:'/images/projects/phyesan/예산재정2.png',detail:''},{src:'/images/projects/phyesan/예산재정3.png',detail:''},{src:'/images/projects/phyesan/예산재정4.png',detail:''}]
+      images: [{src:'/images/projects/phyesan/예산재정1.png',detail:''},
+        {src:'/images/projects/phyesan/예산재정2.png',detail:''},
+        {src:'/images/projects/phyesan/예산재정3.png',detail:''},
+        {src:'/images/projects/phyesan/예산재정4.png',detail:''}]
     },
+    
     'P.Front': {
       skills:['React','TailwindCSS','Redux','Redux-saga','NodeJs'],
-      images: [{src:'/images/projects/pfront/pfront1.png',detail:''},{src:'/images/projects/pfront/pfront2.png',detail:''},{src:'/images/projects/pfront/pfront3.png',detail:''},{src:'/images/projects/pfront/pfront4.png',detail:''},{src:'/images/projects/pfront/pfront5.png',detail:''},{src:'/images/projects/pfront/pfront6.png',detail:''},{src:'/images/projects/pfront/pfront7.png',detail:''}]
+      images: [{src:'/images/projects/pfront/pfront1.png',detail:''},
+        {src:'/images/projects/pfront/pfront2.png',detail:''},
+        {src:'/images/projects/pfront/pfront3.png',detail:''},
+        {src:'/images/projects/pfront/pfront4.png',detail:''},
+        {src:'/images/projects/pfront/pfront5.png',detail:''},
+        {src:'/images/projects/pfront/pfront6.png',detail:''},
+        {src:'/images/projects/pfront/pfront7.png',detail:''}]
     },
+    
   }
 
   return (
     <section>
       <h2>Projects</h2>
+
+      <div className={st.container}>
+        <h3>Nodetalks</h3>
+        <div className={st.content}>
+          <Carousel data={projects['nodetalks'].images}></Carousel>
+          <desc>
+            <div>
+              <label>Skills</label>
+              <span className={st.flexwrap}>
+                {projects['nodetalks'].skills.map((skill, i) => (
+                  <em key={`nodetalks_${skill}_${i}`}>{skill}</em>
+                ))}
+              </span>
+            </div>
+            <div>
+              <label>Period</label>
+              <span>2024.07 ~ 2024.08</span>
+            </div>
+            <div>
+              <label>Site</label>
+              <a href="https://www.nodetalks.co.kr/" target="_blank">
+                nodetalks.co.kr
+              </a>
+            </div>
+            <div>
+              <label>Desc</label>
+              <span>
+                <b>㈜노트톡스 홈페이지</b>입니다.
+              </span>
+            </div>
+          </desc>
+        </div>
+      </div>
+
       <div className={st.container}>
         <h3>P.Front (포항공대복지회)</h3>
         <div className={st.content}>
