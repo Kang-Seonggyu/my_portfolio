@@ -84,7 +84,7 @@ export function Skills() {
           </p>
           <p>
             <Image
-              src={'/images/skills/redux-saga.png'}
+              src={'/images/skills/redux_saga.png'}
               alt=""
               width={180}
               height={45}
