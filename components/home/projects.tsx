@@ -4,6 +4,22 @@ import st from './projects.module.css';
 export function Projects() {
   // prettier-ignore
   const projects = {
+    'dgdp':{
+      skills: ['React', 'React-Query', 'Zustand', 'Ant-design', 'Typescript'],
+      images: [
+        {src:'/images/projects/dgdp/dgdp_0.png',detail:''},
+        {src:'/images/projects/dgdp/dgdp_1.png',detail:''},
+        {src:'/images/projects/dgdp/dgdp_2.png',detail:''},
+        {src:'/images/projects/dgdp/dgdp_3.png',detail:''},          
+        {src:'/images/projects/dgdp/dgdp_4.png',detail:''},          
+        {src:'/images/projects/dgdp/dgdp_5.png',detail:''},          
+        {src:'/images/projects/dgdp/dgdp_6.png',detail:''},          
+        {src:'/images/projects/dgdp/dgdp_7.png',detail:''},          
+        {src:'/images/projects/dgdp/dgdp_8.png',detail:''},          
+        {src:'/images/projects/dgdp/dgdp_9.png',detail:''},          
+      ]
+    },
+    
     'nodetalks':{
       skills:['JQuery'],
       images: [
@@ -58,6 +74,47 @@ export function Projects() {
   return (
     <section>
       <h2>Projects</h2>
+
+      <div className={st.container}>
+        <h3>디자인진흥원 전주기</h3>
+        <div className={st.content}>
+          <Carousel data={projects['dgdp'].images}></Carousel>
+          <desc>
+            <div>
+              <label>Skills</label>
+              <span className={st.flexwrap}>
+                {projects['dgdp'].skills.map((skill, i) => (
+                  <em key={`dgdp_${skill}_${i}`}>{skill}</em>
+                ))}
+              </span>
+            </div>
+            <div>
+              <label>Period</label>
+              <span>2024.05 ~ 2024.11</span>
+            </div>
+            <div>
+              <label>Desc</label>
+              <span>
+                <b>디자인 진흥원 전주기 프로젝트</b>입니다.
+              </span>
+            </div>
+            <div>
+              <label>Detail</label>
+              <div>
+                <p>전주기 프로젝트 관리</p>
+                <p>Zustand를 이용한 상태관리</p>
+                <p>React-Query를 이용한 API 연동</p>
+                <p>통계 이력에 대한 데이터 시각화</p>
+                <p>프로젝트 관리(참여인원 및 권한, 프로젝트 단계 등)</p>
+                <p>프로젝트 단계별 메시지/참고자료/이슈관리 기능</p>
+                <p>상세화 단계의 계산 기능</p>
+                <p>간트차트를 이용한 일정관리</p>
+                <p>3D 제품 시각화</p>
+              </div>
+            </div>
+          </desc>
+        </div>
+      </div>
 
       <div className={st.container}>
         <h3>Nodetalks</h3>
